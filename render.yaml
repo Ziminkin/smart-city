@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: smart-city-app
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python app.py
+    disk:
+      name: smart-city-data
+      mountPath: /data
+      sizeGB: 1
